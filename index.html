@@ -20,9 +20,16 @@
     <a href="#">ارتباط با ما</a>
   </nav>
 
-  <main>
-
-  </main>
+<main>
+  {% for post in site.posts %}
+    <article>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+    </article>
+    <hr>
+  {% endfor %}
+</main>
 
   <footer>
     <p>© ۲۰۲۵ پژوهشکدهٔ تاریخ سیلک - طراحی‌شده با عشق به فرهنگ ایران</p>
