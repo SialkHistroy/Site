@@ -19,7 +19,11 @@
     <a href="#">درباره ما</a>
     <a href="#">ارتباط با ما</a>
   </nav>
-
+  
+<div id="search-box" style="text-align: center; margin: 20px;">
+  <input type="text" id="searchInput" placeholder="جستجو در مقاله‌ها..." style="padding: 10px; width: 250px; font-size: 16px;">
+</div>
+  
 <main>
   {% for post in site.posts %}
     <article>
@@ -30,6 +34,23 @@
     <hr>
   {% endfor %}
 </main>
+  <script>
+  const searchInput = document.getElementById('searchInput');
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    const articles = document.querySelectorAll('main article');
+
+    articles.forEach(article => {
+      const title = article.querySelector('h2').textContent.toLowerCase();
+      if (title.includes(query)) {
+        article.style.display = 'block';
+      } else {
+        article.style.display = 'none';
+      }
+    });
+  });
+</script>
 
   <footer>
     <p>© ۲۰۲۵ پژوهشکدهٔ تاریخ سیلک - طراحی‌شده با عشق به فرهنگ ایران</p>
