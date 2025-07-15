@@ -1,0 +1,68 @@
+@import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css'); /* فونت فارسی با حس سنتی */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap'); /* برای تیتر انگلیسی کلاسیک */
+@import url('https://cdn.fontcdn.ir/Font/Persian/GanjNameh/GanjNameh.css');
+
+body {
+  direction: rtl;
+  font-family: 'GanjNameh', serif;
+  background: #f6f2e9;
+  color: #2e1f0f;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #a8926f;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  background-image: url('https://cdn.pixabay.com/photo/2017/10/02/22/24/persian-2817649_1280.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+header img {
+  max-width: 100px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+nav {
+  background-color: #d3bfa3;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #4e3b2a;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+main {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+article {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-right: 5px solid #c2a36b;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  background: #a8926f;
+  color: white;
+  padding: 15px;
+}
