@@ -19,41 +19,35 @@
     <a href="#">درباره ما</a>
     <a href="#">ارتباط با ما</a>
   </nav>
-  
-<div id="search-box" style="text-align: center; margin: 20px;">
-  <input type="text" id="searchInput" placeholder="جستجو در مقاله‌ها..." style="padding: 10px; width: 250px; font-size: 16px;">
-</div>
-  
-<main>
-  {% for post in site.posts %}
-    <article>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-    </article>
-    <hr>
-  {% endfor %}
-</main>
+
+  <div id="search-box">
+    <input type="text" id="searchInput" placeholder="جستجو در مقاله‌ها...">
+  </div>
+
+  <main>
+
+  </main>
+
   <script>
-  const searchInput = document.getElementById('searchInput');
+    document.addEventListener('DOMContentLoaded', function () {
+      const input = document.getElementById('searchInput');
+      const posts = document.querySelectorAll('.custom-post');
 
-  searchInput.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    const articles = document.querySelectorAll('main article');
-
-    articles.forEach(article => {
-      const title = article.querySelector('h2').textContent.toLowerCase();
-      if (title.includes(query)) {
-        article.style.display = 'block';
-      } else {
-        article.style.display = 'none';
-      }
+      input.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        posts.forEach(post => {
+          const title = post.querySelector('.post-title').textContent.toLowerCase();
+          const desc = post.querySelector('.post-desc').textContent.toLowerCase();
+          const source = post.dataset.source.toLowerCase();
+          const matches = title.includes(query) || desc.includes(query) || source.includes(query);
+          post.style.display = matches ? 'block' : 'none';
+        });
+      });
     });
-  });
-</script>
+  </script>
 
   <footer>
-    <p>© ۲۰۲۵ پژوهشکدهٔ تاریخ سیلک - طراحی‌شده با عشق به فرهنگ ایران</p>
+    <p>© ۲۰۲۵ پژوهشکدهٔ تاریخ سیلک – طراحی‌شده با عشق به فرهنگ ایران</p>
   </footer>
 
 </body>
