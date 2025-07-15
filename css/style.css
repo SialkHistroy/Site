@@ -171,7 +171,30 @@ footer {
   border-radius: 8px;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
+.media-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
 
+.post-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #d8c4a0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.post-image:hover {
+  transform: scale(1.03);
+}
+
+.post-video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
 /* انیمیشن‌ها */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
