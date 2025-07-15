@@ -1,68 +1,96 @@
-@import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css'); /* فونت فارسی با حس سنتی */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap'); /* برای تیتر انگلیسی کلاسیک */
-@import url('https://cdn.fontcdn.ir/Font/Persian/GanjNameh/GanjNameh.css');
-
 body {
   direction: rtl;
-  font-family: 'GanjNameh', serif;
-  background: #f6f2e9;
-  color: #2e1f0f;
+  font-family: "Vazirmatn", serif;
+  background-color: #f7f2ea;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #a8926f;
-  color: white;
   text-align: center;
-  padding: 40px 20px;
-  background-image: url('https://cdn.pixabay.com/photo/2017/10/02/22/24/persian-2817649_1280.jpg');
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-
-header h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-  font-family: 'Cinzel Decorative', cursive;
+  padding: 30px;
+  background-color: #e6dbc7;
+  border-bottom: 2px solid #c4b199;
 }
 
 header img {
-  max-width: 100px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #5a3d2b;
+  margin: 0;
+}
+
+header p {
+  font-size: 16px;
+  color: #7e6a52;
 }
 
 nav {
-  background-color: #d3bfa3;
+  background-color: #d2c1a5;
   padding: 10px;
   text-align: center;
 }
 
 nav a {
-  color: #4e3b2a;
+  margin: 0 12px;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
+  color: #543c24;
 }
 
-main {
-  padding: 30px;
-  max-width: 800px;
-  margin: auto;
+nav a:hover {
+  color: #2c1a0e;
 }
 
-article {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-right: 5px solid #c2a36b;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+#search-box {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 260px;
+  font-size: 16px;
+  border: 1px solid #a08b6c;
+  border-radius: 5px;
+}
+
+.custom-post {
+  background: #fff8ee;
+  border-left: 5px solid #c2a87b;
+  margin: 20px auto;
+  padding: 15px 20px;
+  max-width: 700px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.08);
+}
+
+.post-title {
+  font-size: 22px;
+  color: #5c3b1a;
+  margin-bottom: 8px;
+}
+
+.post-desc {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.post-source {
+  font-size: 14px;
+  color: #7a5b3e;
+  font-style: italic;
 }
 
 footer {
   text-align: center;
-  background: #a8926f;
-  color: white;
-  padding: 15px;
+  padding: 20px;
+  background-color: #e6dbc7;
+  font-size: 14px;
+  color: #4a3a26;
+  border-top: 2px solid #c4b199;
 }
